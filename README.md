@@ -1,3 +1,6 @@
+> [!CAUTION]
+> `./build` uses a soon-to-be deprecated docker command `build`.
+
 # Neko Apps
 
 [Neko](https://github.com/m1k1o/neko) is open source virtual browser run in a docker container, that can be accessed from a webpage. It does not have to be only web browser. It can be anything.
@@ -10,6 +13,11 @@ You can build any container by calling `./build` binary. Use dir name as applica
 
 ```sh
 ./build <dir-name>
+```
+or prepend `nvidia-` to dir name to build NVidia GPU compatible apps.
+
+```sh
+./build nvidia-<dir-name>
 ```
 
 You can copy `.env` to `.env.local` and modify your build image or neko base image.
